@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load fitness_filters %}
+
+{% block content %}
+<div class="goal-detail">
+    <h1>{{ goal.name }}</h1>
+    <div class="goal-info">
+        <p>Target: {{ goal.target_value }} {{ goal.unit }}</p>
+        <p>Current: {{ goal.current_value }} {{ goal.unit }}</p>
+        <div class="progress-bar">
+            <div style="width: {{ goal.current_value|div:goal.target_value|mul:100 }}%;"></div>
+        </div>
+        <p>Start: {{ goal.start_date }}</p>
+        <p>End: {{ goal.end_date }}</p>
+    </div>
+    <div class="goal-actions">
+        <a href="{% url 'fitness:goal-update' goal.pk %}">Update Progress</a>
+        <a href="{% url 'fitness:goal-delete' goal.pk %}">Delete Goal</a>
+    </div>
+</div>
+{% endblock %}

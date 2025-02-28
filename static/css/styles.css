@@ -1,0 +1,21 @@
+.progress-bar {
+    width: 200px;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-bar div {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 10px;
+}
+
+.goal-info p {
+    margin: 5px 0;
+}
+
+.goal-actions a {
+    margin-right: 10px;
+}

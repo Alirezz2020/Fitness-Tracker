@@ -1,0 +1,14 @@
+<ul class="list-group">
+    {% for workout in workouts %}
+    <li class="list-group-item">
+        <a href="{% url 'fitness:workout-detail' workout.pk %}">
+            {{ workout.exercise }} on {{ workout.date }}
+        </a>
+        <span class="badge badge-info">
+            Sets: {{ workout.sets }} | Reps: {{ workout.reps }}
+        </span>
+    </li>
+    {% empty %}
+    <li class="list-group-item">No workouts logged</li>
+    {% endfor %}
+</ul>

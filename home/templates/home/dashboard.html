@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Fitness Tracker Dashboard</h1>
+
+    <!-- Search Form -->
+    <form method="get" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search by workout/exercise..."
+                   value="{{ search_query }}">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+
+    {% if search_query %}
+        <h2>Search Results: "{{ search_query }}"</h2>
+    {% else %}
+        <h2>Latest Workouts & Goals</h2>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header bg-info text-white">
+                    <i class="fas fa-dumbbell"></i> Recent Workouts
+                </div>
+                <div class="card-body">
+                    {% include 'fitness/workout_list_partial.html' with workouts=workouts %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header bg-primary text-white">
+                    <i class="fas fa-bullseye"></i> Current Goals
+                </div>
+                <div class="card-body">
+                    {% include 'fitness/goal_list_partial.html' with goals=goals %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

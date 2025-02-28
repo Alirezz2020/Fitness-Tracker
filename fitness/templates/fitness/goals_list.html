@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Goals</h1>
+<a href="{% url 'fitness:goal-create' %}">Add Goal</a>
+<ul>
+    {% for goal in goals %}
+    <li>
+        <a href="{% url 'fitness:goal-detail' goal.pk %}">{{ goal.name }}</a>
+        <small>({{ goal.start_date }} - {{ goal.end_date }})</small>
+        <span class="progress">{{ goal.current_value }}/{{ goal.target_value }} {{ goal.unit }}</span>
+        <a href="{% url 'fitness:goal-update' goal.pk %}">Edit</a>
+        <a href="{% url 'fitness:goal-delete' goal.pk %}">Delete</a>
+    </li>
+    {% empty %}
+    <li>No goals set yet</li>
+    {% endfor %}
+</ul>
+{% endblock %}

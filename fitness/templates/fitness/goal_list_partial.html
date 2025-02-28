@@ -1,0 +1,14 @@
+<ul class="list-group">
+    {% for goal in goals %}
+    <li class="list-group-item">
+        <a href="{% url 'fitness:goal-detail' goal.pk %}">
+            {{ goal.name }} ({{ goal.start_date }} - {{ goal.end_date }})
+        </a>
+        <span class="badge badge-primary">
+            {{ goal.current_value }} / {{ goal.target_value }} {{ goal.unit }}
+        </span>
+    </li>
+    {% empty %}
+    <li class="list-group-item">No goals set</li>
+    {% endfor %}
+</ul>

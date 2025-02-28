@@ -1,0 +1,109 @@
+.env
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Files that should not be ignored
+!migrations/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# PyCharm
+.idea/
+
+# Other
+*.csv
+*.json
+*.sqlite3
+*.sqlite
+*.user
+*.xls
+*.xlsx
+_NOTES.txt
+__MACOSX
+*.mode1v3
+.settings.yml
+*.DartSass.json
+*.kceeditedfile*.kcktlk*
+*.backup
+*.rar
+*.tar.gz
+*.zip
+*.tar
+local_settings.py
+.csv
+.env*
+
+# Generated files
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+package.json
+
+# Coverage
+.coverage
+htmlcov/
+coverage.xml
+
+# Python
+.project
+.pydevproject
+.settings/
+.pylint.d/
+
+# Buckminster
+.buckminster/
+
+# Django template
+AppData/
+
+# System
+ained/
+ip_ns
+.session
+
+# Dev
+CONADV
+CONADVP
+CONADVR
+CONADVS
+ELD
+FPDemo
+FX
+NSDATA
+VPdummy
+
+# Emails
+*.eml
+
+# Logs
+*.log
+
+# macOS
+__MACOSX/
+*.DS_Store
+.DS_Store/
+.AppleDouble/
+.LSOverride
+
+# Thumbnails
+.Thumbnails/

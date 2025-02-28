@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ workout.exercise }} on {{ workout.date }}</h1>
+  <p>Duration: {{ workout.duration }} minutes</p>
+  <p>Calories Burned: {{ workout.calories_burned }}</p>
+  <a href="{% url 'fitness:workout-update' workout.pk %}">Edit</a>
+  <a href="{% url 'fitness:workout-delete' workout.pk %}">Delete</a>
+{% endblock %}

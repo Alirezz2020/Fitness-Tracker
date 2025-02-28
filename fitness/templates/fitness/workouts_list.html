@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Workouts</h1>
+  <a href="{% url 'fitness:workout-create' %}">Add Workout</a>
+  <ul>
+    {% for workout in workouts %}
+      <li>
+        <a href="{% url 'fitness:workout-detail' workout.pk %}">{{ workout.exercise }} on {{ workout.date }}</a>
+      </li>
+    {% empty %}
+      <li>No workouts logged yet</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
