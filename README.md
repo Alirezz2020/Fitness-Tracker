@@ -1,3 +1,30 @@
+# Fitness Tracker Platform
+
+A Django-based web application that allows users to track their fitness activities, monitor progress, and achieve their health goals. The platform includes features for logging workouts, tracking nutrition, and visualizing progress over time.
+
+## Features
+
+- **User Authentication**: Users can register, log in, and log out.
+- **Workout Logging**: Users can log their workouts, including exercises, sets, and reps.
+- **Nutrition Tracking**: Users can track their daily food intake and nutrition.
+- **Progress Visualization**: Users can view their progress over time with charts and graphs.
+- **Goal Setting**: Users can set and track fitness goals.
+- **Social Sharing**: Users can share their achievements with friends and followers.
+
+## Technology Stack
+
+- **Backend**: Django (Python)
+- **Frontend**: HTML, CSS, JavaScript
+- **Database**: PostgreSQL
+- **Other**: Bootstrap (Frontend Framework)
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.8+
+- pip
+- virtualenv (optional but recommended)
 
 
 ## Installation
@@ -5,8 +32,8 @@
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/Alirezz2020/Online-Learning-Platform-.git
-   cd Online-Learning-Platform-
+   git clone https://github.com/Alirezz2020/Fitness-Tracker.git
+   cd Fitness-Tracker
 2. **Set Up a Virtual Environment:**
     ```sh
    python -m venv venv
